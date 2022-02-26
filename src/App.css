@@ -1,38 +1,119 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background-color:#1F2235;
+  font-family: 'Comic Neue', cursive;
+  color: #FFF;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  max-width: 800px;
+  padding: 30px;
+  background-color: #313552;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-input {
+  width: 80%;
+  padding-right: 30px ;
+  margin-bottom: 40px;
+}
+
+.todo-header input {
+  height: 50px;
+  width: 100%;
+  background: inherit;
+  color: #FFF;
+  border: 1px solid #FDB525;
+  padding-left: 20px;
+  font-size: 17px;
+}
+
+.container-btn {
+  width: 20%;
+}
+.btn-add-todo {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #FDB525;
+  background-color: inherit;
+  color: #FDB525;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+.btn-add-todo:hover {
+  color: #313552;
+  background: #FDB525;
+}
+
+.first-part {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.select-number {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-clear-select {
+  background : #FDB525;
+  font-weight: bold;
+  border: 1px solid #FDB525;
+  padding: 1em;
+}
+
+.list-todo {
+  margin-top: 50px;
+}
+
+.task {
+  background: #1F2235;
+  
+}
+
+.delete-single {
+  background: inherit;
+  color: #FDB525;
+  border: none;
+  font-size: 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.task-text {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  background: #FDB525;
+  border : 1px solid #FDB525;
 }
